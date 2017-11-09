@@ -1,8 +1,9 @@
 ---
-- name: download zabbix-agent repo
-  shell: "wget http://repo.zabbix.com/zabbix/3.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.2-1+xenial_all.deb"
-- name: dpkg zabbix-agent
-  shell: "dpkg -i zabbix-release_3.2-1+xenial_all.deb"
+
+- name: install zabbix-agent repo
+  apt:
+    deb: http://repo.zabbix.com/zabbix/3.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_3.2-1+xenial_all.deb
+
 - name: install zabbix-agent
   apt:
     name: zabbix-agent
@@ -12,3 +13,6 @@
   template: src=zabbix_agentd.conf dest=/etc/zabbix/zabbix_agentd.conf
   notify:
      - restart zabbix-agent
+
+- name: start zabbix-agent
+  service: name=zabbix-agent state=started
