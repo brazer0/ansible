@@ -1,0 +1,8 @@
+---
+- name: install zabbix agent
+  hosts: ubuntu
+  remote_user: ansible
+  become: true
+
+  roles:
+   - ubuntu

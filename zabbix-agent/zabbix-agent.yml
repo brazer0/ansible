@@ -1,9 +1,0 @@
----
-- name: install zabbix agent
-  hosts: test
-  remote_user: stas
-  become: true
-
-  roles:
-   - zabbix-agent
-# проверку статуса сервиса
