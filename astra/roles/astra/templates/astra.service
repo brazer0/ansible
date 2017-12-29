@@ -1,0 +1,14 @@
+[Unit]
+Description=Astra
+After=network-online.target
+
+[Service]
+TimeoutStartSec=10
+LimitNOFILE=65536
+ExecStartPre=/bin/mkdir -p /etc/astra
+ExecStart=/usr/bin/astra /etc/astra/astra.lua --log /var/log/astra.log
+ExecStop=/bin/kill $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

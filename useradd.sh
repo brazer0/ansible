@@ -1,0 +1,8 @@
+#!/bin/sh
+useradd -m ansible
+adduser ansible sudo
+mkdir /home/ansible/.ssh
+#echo 'AuthorizedKeysFile	%h/.ssh/authorized_keys' >> /etc/ssh/sshd_config
+#service ssh restart
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDFd18KHUk7wWNMF2Zw6xw6zQ9If/7/qcgMZHGINw6aVItYRk2zfWwBIr2NZcbfzVXkcLONm2eAGNlCmtjWBFodoYIHXk07nkDFu5c8eU2LjRdpS1gdracx1nUpCFMuzUySUuIdYPMSY+QHUIh864E1USs/X+4jYz85Ia3vUHhnlW7VwpDSSxeMlGmWIusqgKGIP6Mov5pr0JPGFLC+FVUzH8ABxK5SJlCcbF7cs7kdubqpwXuqEv8TduKPQBtzeU3NtzPavK78XIZrt1wJcws216I9rNy9G1ptgqgeP3jflbJLrYlXid8FpYPPU5vlvtck17a8hQAJ7GQmEZtRA7Xgf65cIqatpSW51Nds2dr7ORme30kwi6nm1ZO5wdXD8TGwTbc1CFnIJ1oAFqfcNPR7UgClnEYgH+kyeHZiLnP/gqsieYi6GOv/NgZIkrS2AcNpgbR4g/VrXu8lZWKpYAYrxHMSRqpQH0HG4Tokah3H/h+Uv1gKrVk3GpNtihDsWk419hGu0I2ixAwKHo/5jq8LuReHNv8FmEEN2oWUsDzjpBu1hIB84jyuex4tswGnya/sIPMGDcEO8P0S+tjncIM7/bvs0bbK5gptBVsX2o1m8dwKkLeG0rqYGHlYJ4peVLYiWJDtsVuL32WmT1vblcPeFwDj0mQhLgKMmR3okfSuyQ== stas@vektor-plus.com' > /home/ansible/.ssh/authorized_keys
+echo 'Defaults:ansible      !authenticate' >> /etc/sudoers

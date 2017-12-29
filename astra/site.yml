@@ -1,0 +1,8 @@
+---
+- name: install astra
+  hosts: astra
+  remote_user: ansible
+  become: true
+
+  roles:
+   - astra

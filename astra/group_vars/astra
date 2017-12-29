@@ -1,0 +1,2 @@
+eth_name: enp14s0
+#{{ eth_name }}

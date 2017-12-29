@@ -1,0 +1,32 @@
+# This file describes the network interfaces available on your system
+
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+iface {{ eth_name }} inet static
+address 192.168.200.23
+netmask 255.255.255.0
+#gateway 192.168.200.254
+#dns-nameservers 91.193.80.66 8.8.8.8
+#dns-search vektor-plus.com
+#auto {{ eth_name }}
+
+#TVstation
+auto vlan999
+iface vlan999 inet static
+address 10.10.10.99
+netmask 255.255.255.0
+vlan_raw_device {{ eth_name }}
+
+#inet_cisco
+auto vlan535
+iface vlan535 inet static
+address 91.193.80.151
+netmask 255.255.255.192
+gateway 91.193.80.129
+dns-nameservers 91.193.80.66 8.8.8.8
+dns-search vektor-plus.com
+vlan_raw_device {{ eth_name }}
