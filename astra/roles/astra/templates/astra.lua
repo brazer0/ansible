@@ -81,6 +81,28 @@ output = {
          },
 })
 
+make_channel({
+name = "DORAMA",
+input = {
+	"http://95.67.12.82:9046",
+	"file:///home/ugin/gcp_sd_mute.ts#loop"
+        },
+output = {
+         "udp://10.10.10.99@239.0.0.30:2222"
+         },
+})
+
+make_channel({
+name = "RTVd",
+input = {
+	"http://95.67.12.82:9045",
+	"file:///home/ugin/gcp_sd_mute.ts#loop"
+        },
+output = {
+         "udp://10.10.10.99@239.0.0.31:2222"
+         },
+})
+
 --[[make_channel({
 name = "Fight Channel World HD",
 input = {

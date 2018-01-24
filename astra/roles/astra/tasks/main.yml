@@ -4,13 +4,18 @@
   template: src=astractl.conf dest=/etc/sysctl.d/astractl.conf
 
 - name: copy astra4.4.182_free
-  copy: src=astra dest=/usr/bin/astra mode=744
+  copy: src=astra4.4.182_free dest=/usr/bin/astra mode=744
 
 - name: copy astra_service
   template: src=astra.service dest=/lib/systemd/system/astra.service
 
+- name: enable astra_service
+  systemd: enabled=yes name=astra
+
 - name: copy astra_conf
   template: src=astra.lua dest=/etc/astra/astra.lua
+  notify:
+   - restart astra
 
 - name: copy astra_interfaces
   template: src=interfaces dest=/etc/network/interfaces

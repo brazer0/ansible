@@ -1,5 +1,6 @@
 [ubuntu]
-91.193.80.20
+#91.193.80.20
 #192.168.200.101
+91.193.80.151 ansible_python_interpreter=/usr/bin/python3
 [test2]
 192.168.200.250
