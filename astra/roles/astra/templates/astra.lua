@@ -93,7 +93,7 @@ output = {
          },
 })
 
-make_channel({
+--[[make_channel({
 name = "DORAMA",
 input = {
 	"http://95.67.12.82:9046",
@@ -101,7 +101,7 @@ input = {
 output = {
          "udp://10.10.10.99@239.0.0.30:2222"
          },
-})
+})]]
 
 make_channel({
 name = "RTVd",
