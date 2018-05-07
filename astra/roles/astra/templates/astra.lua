@@ -1,4 +1,4 @@
-make_channel({
+--[[make_channel({
 name = "Sport1",
 input = {
         "http://iptv1.pvplus.tv:8121/sport1mp2b1",
@@ -8,9 +8,9 @@ input = {
 output = {
          "udp://10.10.10.99@239.0.0.22:2222#sync"
          },
-})
+})]]
 
-make_channel({
+--[[make_channel({
 name = "Sport2",
 input = {
         "http://iptv1.pvplus.tv:8221/sport2mp2b1",
@@ -20,9 +20,9 @@ input = {
 output = {
          "udp://10.10.10.99@239.0.0.23:2222#sync"
          },
-})
+})]]
 
-make_channel({
+--[[make_channel({
 name = "Sport1 Baltic",
 input = {
 	"http://iptv1.pvplus.tv:9041/sport1bmp2b1",
@@ -32,9 +32,9 @@ input = {
 output = {
          "udp://10.10.10.99@239.0.0.24:2222#sync"
          },
-})
+})]]
 
-make_channel({
+--[[make_channel({
 name = "Sport2 Baltic",
 input = {
 	"http://iptv1.pvplus.tv:8421/sport2bmp2b1",
@@ -44,7 +44,7 @@ input = {
 output = {
          "udp://10.10.10.99@239.0.0.25:2222#sync"
          },
-})
+})]]
 
 --[[make_channel({
 name = "Fight Channel World HD",
@@ -58,7 +58,7 @@ output = {
          },
 })]]
 
-make_channel({
+--[[make_channel({
 name = "Kino1",
 input = {
 	"http://iptv1.pvplus.tv:9082/kino1mp4b1",
@@ -68,9 +68,9 @@ input = {
 output = {
          "udp://10.10.10.99@239.0.0.27:2222#sync"
          },
-})
+})]]
 
-make_channel({
+--[[make_channel({
 name = "NuArt",
 input = {
         "http://iptv1.pvplus.tv:9073/nuart",
@@ -80,7 +80,7 @@ input = {
 output = {
          "udp://10.10.10.99@239.0.0.28:2222#sync"
          },
-})
+})]]
 
 make_channel({
 name = "Fashion HD",
